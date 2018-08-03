@@ -256,7 +256,7 @@ ROLLUP_ATTRS = {
     "srcs": attr.label_list(
         doc = """JavaScript source files from the workspace.
         These can use ES2015 syntax and ES Modules (import/export)""",
-        allow_files = [".js"]),
+        allow_files = [".js", ".jsx", ".css"]),
     "deps": attr.label_list(
         doc = """Other rules that produce JavaScript outputs, such as `ts_library`.""",
         aspects = [rollup_module_mappings_aspect]),
